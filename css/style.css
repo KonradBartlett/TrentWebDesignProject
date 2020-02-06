@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
+
+body {
+  font-family: 'Oxygen Mono', Consolas, monospace;
+  width: 70em;
+  margin: 0 auto;
+}
+
+/******************/
+/* HEADER STYLING */
+/******************/
+
+/* Header background image and size */
+header {
+  /* https://www.pexels.com/photo/brown-film-133070/ */
+  background-image: url(../img/filmstrip.jpg);
+  background-size: 70em 15em;
+  border: 0.3em solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15em;
+}
+
+/* Header title background (black box) */
+header div {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-family: 'Staatliches', Tahoma, sans-serif;
+  font-size: 2em;
+  padding: 0.5em 0.5em;
+  text-align: center;
+}
+
+/* Header font sizes */
+header h1,h2 {
+  margin: 0 0.5em;
+}
+
+
+/**********************/
+/* NAVIGATION STYLING */
+/**********************/
+
+/* Navigation colour and size */
+nav {
+  background-color: black;
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+/* Navigation links */
+nav a {
+  background-color: black;
+  color: white;
+  margin: 0.2em 0.2em;
+  padding: 0.2em 1em;
+  text-align: center;
+  text-decoration: none;
+}
+/* Active navigation links */
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* Navigation links on hover */
+nav a:hover {
+  background-color: #333;
+}
+/* Navigation list */
+nav li {
+  display: inline-block;
+}
+
+/************************/
+/* MAIN CONTENT STYLING */
+/************************/
+
+/* Main content section size and border */
+main {
+  border: 0.3em solid black;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+/* Title font sizes */
+main h1 {
+  font-size: 1.7em;
+}
+main h2 {
+  font-size: 1.3em;
+  margin: 0.5em 0;
+}
+
+form div {
+  margin: 0.5em 0;
+}
+/* Form label alignment */
+form>div>label {
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 11em;
+}
+/* Extra information next to an input box */
+form>div>span {
+  font-size: 0.7em;
+  font-style: italic;
+  margin-left: 1em;
+}
+/* Create a border for all fieldsets */
+fieldset {
+  border: 0.1em solid black;
+  border-radius: 0.5em;
+}
+legend {
+  text-decoration: underline;
+}
+/* Align submit and reset buttons */
+input[type="submit"], input[type="button"] {
+  display: inline-block;
+  font-family: inherit;
+  float: right;
+  margin-left: 0.5em;
+}
+/* Movie figure alignment */
+figure {
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 0;
+}
+/* Figcaption Sizes */
+figcaption {
+  font-size: 0.8em;
+}
+
+/* Layout for account, add video, and login pages */
+#account-page, #add-vid-page, #edit-page, #login-page, #delete-account-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Layout for main and search pages */
+#main-page>div, #search-page>div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 50em;
+}
+/* Layout for details page */
+#details-page {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Movie figure spacing on details page */
+#details-page figure+div {
+  margin-left: 3em;
+  margin-bottom: 1em;
+}
+
+#main-page img, #search-page img {
+  width: 120px;
+}
+/* Prevent link colour change on visited movie icons */
+#main-page figure+div a, #main-page figure+div a:visited, #search-page figure+div a, #search-page figure+div a:visited {
+  color: black;
+}
+/* Details page content spacing and border */
+#details-page>div {
+  border: 0.2em solid black;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  padding: 1em;
+  width: 50em;
+}
+/* Margin between each line on the details page */
+#details-page>div>div {
+  margin-bottom: 0.3em;
+}
+/* Make first part of each line bold on details page */
+#details-page>div>div>span:first-of-type {
+  font-weight: bold;
+}
+/* Set the plot summary to span the whole area width
+    and add extra space below it */
+#details-page>div>div:nth-last-of-type(2) {
+  clear: left;
+  margin-bottom: 2em;
+}
+/* Add spacing between movie format options
+    on the bottom of the details page */
+#details-page>div>div:last-of-type span {
+  font-weight: normal;
+  margin-right: 2em;
+}
+/* Image size and position on details page */
+#details-page img {
+  float: left;
+  height: 300px;
+  margin-right: 2em;
+  margin-bottom: 2em;
+}
+#edit-page img {
+  height: 300px;
+  margin-bottom: 0.5em;
+}
+
+/* Change size of forget password link on login page*/
+#login-page>div a {
+  font-size: 0.8em;
+}
+
+/* Position the form on the search page */
+#search-page form {
+  margin: 2em auto;
+  width: 23em;
+}
+
+#delete-account-page label[for="confirm"] {
+  display: inline-block;
+  text-align: left;
+  width: 19em;
+}
+
+/* Display for each movie on the main page */
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 10em;
+}
+
+/* Style error messages */
+.error {
+  color: red;
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+/* Hide error messages when they are not relevant */
+.noerror {
+  display: none;
+}
+
+/* Take off the border when details are displayed in a modal window */
+.modal {
+  border: 0;
+}
+
+
+/******************/
+/* FOOTER STYLING */
+/******************/
+
+footer {
+  font-size: 0.7em;
+  text-align: center;
+}
